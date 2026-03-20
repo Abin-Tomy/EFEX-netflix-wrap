@@ -19,6 +19,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
+import VectorOwl from "@/components/VectorOwl";
+
 /* ═══════════════════════════════════════════
    NETFLIX WRAP 2025 — Single Page Experience
    ═══════════════════════════════════════════ */
@@ -577,14 +579,11 @@ export default function Home() {
                             <p className="font-inter text-[#E50914] text-sm tracking-[0.3em] uppercase mb-8">Your Streaming Personality</p>
                         </Reveal>
 
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5 mix-blend-screen scale-150">
+                            <VectorOwl className="w-full h-full stroke-white" />
+                        </div>
+
                         <div className="relative group">
-                            {/* Floating Emoji/Icon Parallax */}
-                            <motion.div
-                                style={{ y: useTransform(personalityScroll, [0, 1], [50, -50]), rotate: personalityRotate }}
-                                className="absolute -top-20 -right-10 sm:-right-20 text-[8rem] sm:text-[10rem] drop-shadow-2xl z-20 pointer-events-none"
-                            >
-                                🦉
-                            </motion.div>
 
                             <motion.div
                                 initial={{ scale: 0.9, opacity: 0, rotateX: 10 }}
